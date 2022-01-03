@@ -3,7 +3,7 @@
 os
 cvs
 dates
-python-dateutil
+datetime
 rich
 prettytable
 reportlab
