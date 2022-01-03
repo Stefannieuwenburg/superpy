@@ -1,0 +1,9 @@
+# Extra import tools your need to have to run the program
+
+os
+cvs
+dates
+python-dateutil
+rich
+prettytable
+reportlab
