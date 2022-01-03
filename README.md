@@ -5,7 +5,6 @@
 With this CLI application you can handle your inventory, buy products en sell products.
 The options are almost endless. 
 
-
 # These are the things you can do with this tool:
 
 - Buy products
@@ -16,6 +15,7 @@ The options are almost endless.
 - Show your product with expiring dates
 - Export all the different reports to new .csv files
 - Export the inventory to a PDF file
+- more options easy to add for the future
 
 
 # All dates in this tool have to be defined as dd-mm-yyyy!
@@ -27,6 +27,7 @@ The options are almost endless.
 
 First we can get the help menu:
 
+>for bash user python main.py -h
 >usage: main.py -h 
 >
 >positional arguments:
@@ -41,8 +42,9 @@ First we can get the help menu:
 
 # We can also get the help menu for the three positional arguments:
 
-The Buy-argument:
+# The Buy-argument:
 
+>for bash user python main.py buy [-h] [-p PRODUCT] [-a AMOUNT] [-bpr BUY_PRICE] [-ex EXPIRATION_DATE]
 >usage: main.py buy [-h] [-p PRODUCT] [-a AMOUNT] [-bpr BUY_PRICE] [-ex EXPIRATION_DATE]
 >
 >optional arguments:
@@ -56,8 +58,9 @@ The Buy-argument:
 >  -ex EXPIRATION_DATE, --expiration_date EXPIRATION_DATE
 
 
-The Sell-argument:
+# The Sell-argument:
 
+>for bash user python main.py sell [-h] [-p PRODUCT] [-a AMOUNT] [-spr SELL_PRICE]
 >usage: main.py sell [-h] [-p PRODUCT] [-a AMOUNT] [-spr SELL_PRICE]
 >
 >optional arguments:
@@ -70,8 +73,9 @@ The Sell-argument:
 >                        provide the price of the product
 
 
-And the Report-argument:
+# And the Report-argument:
 
+>for bash user python main.py report [-h] [-d DATE] [-f FILE]
 >usage: main.py report [-h] [-d DATE] [-f FILE]
 >                      {inventory,revenue,profit,sold,exdates} {today,yesterday,lastweek,date}
 >
@@ -87,8 +91,8 @@ And the Report-argument:
 >                        date as dd-mm-yyyy. For example: report inventory date -d 01-01-2022
 >  -f FILE, --file FILE  export report to new file
 
-# How to use the tool for the supermarket 101. 
-
+# Now explain How to use the tool for the supermarket 101. 
+>for bash user python main.py befor it
 # To buy a product you can type in your CLI:
 
 > main.py buy -p apple -bpr 1.50 -a 200 -ex 01-01-2022
@@ -120,11 +124,8 @@ This will add the appels to the bought file
 >
 > main.py report exdates date -d 02-02-2022
 >
-
 # To make files of the Information you asked for
-
 
 > main.py report profit date -d 02-01-2022 -f
 
-
-Add -f to your arguments and the output of the CLI will be exported to a new .csv file
+>Add -f to your arguments and the output of the CLI will be exported to a new .csv file
