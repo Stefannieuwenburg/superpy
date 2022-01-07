@@ -7,7 +7,7 @@ def buy_product(args):
     with open("bought.csv", "r") as inp, open("bought_edit.csv", "a") as out:
         reader = csv.reader(inp)
         writer = csv.writer(out)
-        id_buy = id(1)
+        id_buy = id(0)
 
         isAdded = False
         for line in reader:
