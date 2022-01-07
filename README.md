@@ -20,7 +20,7 @@ The options are almost endless.
 
 # All dates in this tool have to be defined as dd-mm-yyyy!
 
-- are all done whith a string representation following the format: '%Y-%m-%d'
+- are all done whith a string representation following the format: '%d-%m-%y'
 
 
 # Getting started
