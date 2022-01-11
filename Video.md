@@ -1,3 +1,19 @@
+Beste Stefan,
+
+Je hebt de opdracht nog niet goed genoeg gedaan. Je moet de opdracht herkansen.
+
+Het is voor mij nog onduidelijk wat je precies doet met de bought_edit.csv en de bought.csv, het lijkt voor problemen te zorgen in de report inventory.  Verder mis ik een advance-time functie, zie hiervoor ook de opdracht.
+
+Je kan de uitgebreide feedback op je opdracht hier vinden:
+
+https://vimeo.com/664258098/8dc735bd96
+
+Met vriendelijke groet,
+
+Namens het Winc docenten-en-mentorenteam,
+
+Niels - Mentor
+
 
 
 Reactie van docent

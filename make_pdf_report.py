@@ -1,15 +1,16 @@
-from reportlab.platypus import SimpleDocTemplate, Table
+from reportlab.platypus import SimpleDocTemplate, Table, TableStyle
+from reportlab.lib import colors
 import csv
 
 
-def export_to_pdf():
+def make_pdf_report():
     pdf = SimpleDocTemplate("report.pdf")
     flow_obj = []
 
-    with open("bought.csv", "r") as f:
-        bought_report = csv.reader(f)
+    with open("stock.csv", "r") as f:
+        stock_report = csv.reader(f)
         tdata = []
-        for line in bought_report:
+        for line in stock_report:
             data = []
             id = line[0]
             date = line[1]
@@ -30,4 +31,4 @@ def export_to_pdf():
     pdf.build(flow_obj)
 
 
-export_to_pdf()
+make_pdf_report()

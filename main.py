@@ -4,26 +4,24 @@ __human_name__ = "superpy"
 
 # Your code below this line.
 
+from arguments import arguments
+from make_report import make_report
+from buying_products import buy_product
+from selling_products import sell_product
 from rich.console import Console
-from get_arguments import get_arguments
-from get_report import get_report
-from buy_product import buy_product
-from sell_product import sell_product
-
 
 def main(args):
-    args = get_arguments()
+    args = arguments()
     if args.command == "report":
-        get_report(args)
+        make_report(args)
     elif args.command == "buy":
         buy_product(args)
     elif args.command == "sell":
         sell_product(args)
 
-
 if __name__ == "__main__":
     console = Console()
-    args = get_arguments()
+    args = arguments()
     main(args)
     console.print("$" * 90)
     console.print("# Supermarket 101", args)

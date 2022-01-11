@@ -1,23 +1,24 @@
 import os
 import csv
+import arguments
 import dates
 
-# BUY STOCK
+
+# Buy new products for in stock
 def buy_product(args):
-    with open("bought.csv", "r") as inp, open("bought_edit.csv", "a") as out:
+    with open("stock.csv", "r") as inp, open("stock_edit.csv", "a", newline='') as out:
         reader = csv.reader(inp)
         writer = csv.writer(out)
-        id_buy = id(0)
+        id_buy = id(1)
 
         isAdded = False
         for line in reader:
-            
-            # IF PRODUCT IS ALREADY IN STOCK
+            # When product is already in stock, only update amount of product.
             if args.product == line[2]:
                 new_amount = int(args.amount) + int(line[4])
 
-                # IF THE ARGUMENT DATE HAS BEEN GIVEN, YOU WANT TO PURCHASE SOMETHING ON A
-                # DIFFERENT DATE THAN TODAY
+                # If the date-argument is given, the product can be added to the stock on 
+                # a different day than today.
 
                 if args.date == None:
                     new_amount_arr_for_csvfile = [
@@ -44,19 +45,18 @@ def buy_product(args):
 
                     writer.writerow(new_amount_and_date_arr_for_csvfile)
                     try:
-                        os.rename("bought_edit.csv", "bought.csv")
+                        os.rename("stock_edit.csv", "stock.csv")  # The 'stock_edit.csv' will be the 'new' stock.
                     except:
                         None
-                        
-            # IF PRODUCT IS NOT EQUAL TO LINE IN FILE. JUST COPY THE LINE
+            # Whenever the product is not the same as the lines in the stock file, the line will be copied.
             else:
                 writer.writerow(line)
                 try:
-                    os.rename("bought_edit.csv", "bought.csv")
+                    os.rename("stock_edit.csv", "stock.csv")
                 except:
                     None
 
-        # IF PRODUCT IS NOT STOCK, ADD PRODUCT TO FILE
+        # Whenever the product isn't already in the stock, the product is added to the file.
         if not isAdded:
             if args.date == None:
                 new_arr_for_csvfile = [
@@ -80,7 +80,7 @@ def buy_product(args):
                 ]
                 writer.writerow(new_amount_and_date_arr_for_csvfile)
                 try:
-                    os.rename("bought_edit.csv", "bought.csv")
+                    os.rename("stock_edit.csv", "stock.csv")
                 except:
                     None
 
