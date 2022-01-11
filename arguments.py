@@ -29,7 +29,7 @@ def arguments():
         "-d",
         "--date",
         type=str,
-        help="Fill in the date of the transaction when it's on a different day than today. Type -d and the date as dd-mm-yyyy. For example: buy -d 29-05-2021",
+        help="Fill in the date of the transaction when it's on a different day than today. Type -d and the date as dd-mm-yyyy. For example: buy -d 11-01-2022",
     )
 
     # For the reporting parser:
@@ -48,7 +48,7 @@ def arguments():
         "-d",
         "--date",
         type=str,
-        help="Fill in the date for the report. Firstly, type wished 'date' from time argument, then type -d and the date as dd-mm-yyyy. For example: report inventory date -d 29-05-2021",
+        help="Fill in the date for the report. Firstly, type wished 'date' from time argument, then type -d and the date as dd-mm-yyyy. For example: report inventory date -d 11-01-2022",
     )
     report_parser.add_argument(
         "-f", "--file", type=str, help="When the report should be exported to a new csv file, write -f true"

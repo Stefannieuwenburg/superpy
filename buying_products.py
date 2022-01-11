@@ -6,9 +6,9 @@ import dates
 
 # Buy new products for in stock
 def buy_product(args):
-    with open("stock.csv", "r") as inp, open("stock_edit.csv", "a", newline='') as out:
-        reader = csv.reader(inp)
-        writer = csv.writer(out)
+    with open("stock.csv", "r") as input, open("stock_edit.csv", "a", newline='') as output:
+        reader = csv.reader(input)
+        writer = csv.writer(output)
         id_buy = id(1)
 
         isAdded = False

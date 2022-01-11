@@ -2,7 +2,7 @@ from datetime import date, timedelta, datetime
 
 
 today = date.today()
-display_today = datetime.strftime(today, "%d-%m-%Y")  # Using the dd-mm-yyyy format, since it is most used in the Netherlands
+display_today = datetime.strftime(today, "%d-%m-%Y")  # Using the dd-mm-yyyy format
 subtract_one_day = timedelta(days=1)
 subtract_two_days = timedelta(days=2)
 one_week_back_in_time = timedelta(days=7)

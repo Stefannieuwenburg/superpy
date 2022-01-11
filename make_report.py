@@ -10,7 +10,7 @@ import dates
 
 # Making the report:
 def make_report(args):
-    with open("stock.csv", "r") as file_reader, open("report.csv", "w", newline='') as file_writer:
+    with open("stock_edit.csv", "r") as file_reader, open("report.csv", "w", newline='') as file_writer:
         bought_report = csv.reader(file_reader)
         new_csv_file = csv.writer(file_writer)
 
