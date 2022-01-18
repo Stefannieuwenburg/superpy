@@ -28,12 +28,11 @@ so that whas for me also a hard learning for me.
 
 This is where it got interesting. I couldn't find good documentation how to simply add nice looking tables in the CLI. Only after explanation from some youtube video,s, I finally managed to add some nice tables.
 
-# PDF module
+# Advance time module
 
-i found a youtube video about to make a pdf file with reportlab 
-so i use this options. So now you can export your inventory to a brand new PDF file.
-i have bin working for a supermarket befor i lurn the use a lot of pdf files.
-So for me its a need to ad this to my tool
+my program should have an internal conception of what day it is -- perhaps saved to a simple text file -- that we can advance time by two days by using a command like
+so i whent to the exstream whit this now you have to put the day in it how many you whant.
+
 
 # Endless possibilities
 
