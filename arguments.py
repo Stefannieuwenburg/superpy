@@ -6,12 +6,20 @@ def arguments():
     subparser = parser.add_subparsers(dest="command")
 
     # For the buying parser:
-    buy_parser = subparser.add_parser("buy", help="Add the bought products to stock")
+    buy_parser = subparser.add_parser(
+        "buy",
+         help="Add the bought products to stock")
     buy_parser.add_argument(
-        "-p", "--product", type=str.lower, help="Fill in the name of the bought product"
+        "-p",
+        "--product",
+        type=str.lower,
+        help="Fill in the name of the bought product"
     )
     buy_parser.add_argument(
-        "-a", "--amount", type=int, help="How many items are bought?"
+        "-a",
+        "--amount",
+        type=int,
+        help="How many items are bought?"
     )
     buy_parser.add_argument(
         "-bp",
@@ -33,7 +41,9 @@ def arguments():
     )
 
     # For the reporting parser:
-    report_parser = subparser.add_parser("report", help="Make a report")
+    report_parser = subparser.add_parser(
+        "report",
+        help="Make a report")
     report_parser.add_argument(
         "subcommand",
         choices=["inventory", "revenue", "profit", "sold", "expdates"],
@@ -41,6 +51,7 @@ def arguments():
     )
     report_parser.add_argument(
         "time",
+        default=0,
         choices=["today", "yesterday", "lastweek", "date"],
         help="Whenever a report is wished from a different time than today",
     )
@@ -51,7 +62,10 @@ def arguments():
         help="Fill in the date for the report. Firstly, type wished 'date' from time argument, then type -d and the date as dd-mm-yyyy. For example: report inventory date -d 11-01-2022",
     )
     report_parser.add_argument(
-        "-f", "--file", type=str, help="When the report should be exported to a new csv file, write -f true"
+        "-f",
+        "--file",
+        type=str,
+        help="When the report should be exported to a new csv file, write -f true"
     )
     report_parser.add_argument(
         "-pdf",
@@ -61,11 +75,20 @@ def arguments():
     )
 
     # For the selling parser:
-    sell_parser = subparser.add_parser("sell", help="Provide the sold item")
+    sell_parser = subparser.add_parser(
+        "sell",
+        help="Provide the sold item")
     sell_parser.add_argument(
-        "-p", "--product", type=str.lower, help="Fill in the name of the sold product"
+        "-p",
+        "--product",
+        type=str.lower,
+        help="Fill in the name of the sold product"
     )
-    sell_parser.add_argument("-a", "--amount", type=int, help="How many products are sold?")
+    sell_parser.add_argument(
+        "-a",
+        "--amount",
+        type=int,
+        help="How many products are sold?")
     sell_parser.add_argument(
         "-sp",
         "--sell_price",

@@ -15,6 +15,7 @@ The options are almost endless.
 - Show your product with expiring dates
 - Export all the different reports to new .csv files
 - Export the inventory to a PDF file
+- Export advance time to a txt file
 - more options easy to add for the future
 
 
@@ -22,15 +23,14 @@ The options are almost endless.
 
 - are all done whith a string representation following the format: '%d-%m-%y'
 
-
 # Getting started
 
 First we can get the help menu:
 
->for bash user python main.py -h
->usage: main.py -h 
+> for bash user python main.py -h
+> usage: main.py -h 
 >
->positional arguments:
+> positional arguments:
 >  {buy,report,sell}
 >    buy              add products that you bought
 >    report           report command
@@ -44,8 +44,8 @@ First we can get the help menu:
 
 # The Buy-argument:
 
->for bash user python main.py buy [-h] [-p PRODUCT] [-a AMOUNT] [-bpr BUY_PRICE] [-ex EXPIRATION_DATE]
->usage: main.py buy [-h] [-p PRODUCT] [-a AMOUNT] [-bpr BUY_PRICE] [-ex EXPIRATION_DATE]
+>for bash user python main.py buy [-h] [-p PRODUCT] [-a AMOUNT] [-bp BUY_PRICE] [-ex EXPIRATION_DATE]
+>usage: main.py buy [-h] [-p PRODUCT] [-a AMOUNT] [-bp BUY_PRICE] [-ex EXPIRATION_DATE]
 >
 >optional arguments:
 >  -h, --help            show this help message and exit
@@ -53,17 +53,17 @@ First we can get the help menu:
 >                        provide name of the product
 >  -a AMOUNT, --amount AMOUNT
 >                        how many items did you buy
->  -bpr BUY_PRICE, --buy_price BUY_PRICE
+>  -bp BUY_PRICE, --buy_price BUY_PRICE
 >                        provide bought price per item
 >  -ex EXPIRATION_DATE, --expiration_date EXPIRATION_DATE
 
 
 # The Sell-argument:
 
->for bash user python main.py sell [-h] [-p PRODUCT] [-a AMOUNT] [-spr SELL_PRICE]
->usage: main.py sell [-h] [-p PRODUCT] [-a AMOUNT] [-spr SELL_PRICE]
+> for bash user python main.py sell [-h] [-p PRODUCT] [-a AMOUNT] [-spr SELL_PRICE]
+>  usage: main.py sell [-h] [-p PRODUCT] [-a AMOUNT] [-spr SELL_PRICE]
 >
->optional arguments:
+> optional arguments:
 >  -h, --help            show this help message and exit
 >  -p PRODUCT, --product PRODUCT
 >                        name of the product you sold
@@ -75,29 +75,29 @@ First we can get the help menu:
 
 # And the Report-argument:
 
->for bash user python main.py report [-h] [-d DATE] [-f FILE]
->usage: main.py report [-h] [-d DATE] [-f FILE]
+> for bash user python main.py report [-h] [-d DATE] [-f FILE]
+>  usage: main.py report [-h] [-d DATE] [-f FILE]
 >                      {inventory,revenue,profit,sold,exdates} {today,yesterday,lastweek,date}
 >
->positional arguments:
+> positional arguments:
 >  {inventory,revenue,profit,sold,exdates}
 >                        Choose which report you want to see
 >  {today,yesterday,lastweek,date}
 >                        if you want to see a report from different days.
 >
->optional arguments:
+> optional arguments:
 >  -h, --help            show this help message and exit
 >  -d DATE, --date DATE  provide date for report. First type 'date' from the time argument. then type -d and the
 >                        date as dd-mm-yyyy. For example: report inventory date -d 01-01-2022
 >  -f FILE, --file FILE  export report to new file
 
 # Now explain How to use the tool for the supermarket 101. 
->for bash user python main.py befor it
+> for bash user python main.py befor it
 # To buy a product you can type in your CLI:
 
-> main.py buy -p apple -bpr 1.50 -a 200 -ex 01-01-2022
-
-This will add the appels to the bought file
+> main.py buy -p apple -bp 1.50 -a 200 -ex 01-01-2022
+>
+>This will add the appels to the bought file
 
 # To sell a product you can type in your CLI:
 
@@ -124,8 +124,9 @@ This will add the appels to the bought file
 >
 > main.py report exdates date -d 02-02-2022
 >
+> main.py advance-time 
 # To make files of the Information you asked for
 
 > main.py report profit date -d 02-01-2022 -f
 
->Add -f to your arguments and the output of the CLI will be exported to a new .csv file
+> Add -f to your arguments and the output of the CLI will be exported to a new .csv file
