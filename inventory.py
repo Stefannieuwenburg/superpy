@@ -9,9 +9,8 @@ sold_link = './data/sold.csv'
 inventory_link = './data/inventory.csv'
 console = Console()
 
-
+# Reads the bought.csv file and returns a list of dictionaries containing all bought items.
 def get_bought_items():
-    # Reads the bought.csv file and returns a list of dictionaries containing all bought items.
     bought_items = []
     with open(bought_link, 'r', encoding='utf-8-sig') as bought_object:
         reader = csv.DictReader(bought_object)
@@ -19,9 +18,8 @@ def get_bought_items():
             bought_items.append(row)
     return bought_items
 
-
+# Reads the sold.csv file and returns a list of all bought_id's.
 def get_sold_ids():
-    # Reads the sold.csv file and returns a list of all bought_id's.
     sold_ids = []
     with open(sold_link, 'r', encoding='utf-8-sig') as sold_object:
         reader = csv.DictReader(sold_object)
@@ -29,9 +27,8 @@ def get_sold_ids():
             sold_ids.append(row['bought_id'])
     return sold_ids
 
-
+# Reads the sold.csv file and returns a list of dictionaries containing all sold items.
 def get_sold_items():
-    # Reads the sold.csv file and returns a list of dictionaries containing all sold items.
     sold_items = []
     with open(sold_link, 'r', encoding='utf-8-sig') as sold_object:
         reader = csv.DictReader(sold_object)
@@ -39,9 +36,8 @@ def get_sold_items():
             sold_items.append(row)
     return sold_items
 
-
+# Compares the bough and sold products and expiration dates and returns available products
 def get_available_products():
-    # Compares the bough and sold products and expiration dates and returns available products
     bought_items = get_bought_items()
     sold_ids = get_sold_ids()
     available_products = []
@@ -51,9 +47,8 @@ def get_available_products():
             available_products.append(item)
     return available_products
 
-
+# Compares the bough and sold products and expiration dates and returns expired products
 def get_expired_products():
-    # Compares the bough and sold products and expiration dates and returns expired products
     bought_items = get_bought_items()
     sold_ids = get_sold_ids()
     expired_products = []
@@ -65,7 +60,6 @@ def get_expired_products():
 
 
 # get avaiable product of one type
-
 def get_available_product(product_name):
     bought_items = get_bought_items()
     sold_ids = get_sold_ids()
@@ -79,9 +73,8 @@ def get_available_product(product_name):
     else:
         return availabe_products
 
-
+# Takes two dates as arguments with 'YYYY-MM-DD' format and returns all products sold between the dates
 def get_sold_between_dates(first_date, second_date):
-    # Takes two dates as arguments with 'YYYY-MM-DD' format and returns all products sold between the dates
     sold_items = get_sold_items()
     items = []
     for item in sold_items:
@@ -89,9 +82,8 @@ def get_sold_between_dates(first_date, second_date):
             items.append(item)
     return items
 
-
+# returns a dictionary of all the currently available items and how many are available, to use in the inventory report
 def get_inventory():
-    # returns a dictionary of all the currently available items and how many are available, to use in the inventory report
     items = get_available_products()
     inventory = {}
     for item in items:
@@ -101,9 +93,8 @@ def get_inventory():
             inventory.update({item['product_name']: 1})
     return inventory
 
-
+# Takes the inventory and diplays it in a table
 def display_inventory():
-    # Takes the inventory and diplays it in a table
     inventory = get_inventory()
     table = Table(show_header=True, header_style="bold magenta")
     table.add_column('Product', style='dim', width=12)
@@ -115,9 +106,8 @@ def display_inventory():
         )
     console.print(table)
 
-
+# Adds product names to the sale data and prints a table to display the sale data
 def display_sales():
-    # Adds product names to the sale data and prints a table to display the sale data
     sales = get_sold_items()
     purchases = get_bought_items()
     for item in sales:
@@ -136,7 +126,7 @@ def display_sales():
         )
     console.print(table)
 
-
+# display table to the console
 def display_purchases():
     purchases = get_bought_items()
     table = Table(show_header=True, header_style="bold magenta")

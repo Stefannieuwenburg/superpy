@@ -3,7 +3,7 @@ from inventory import get_available_product, sold_link
 from buy import get_new_id
 import csv
 
-
+# sell items on input product: and print it out to console
 def sell_item():
     product_name = input('Product: ')
     today = get_date()
