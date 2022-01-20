@@ -3,21 +3,21 @@ import csv
 import datetime
 from inventory import bought_link
 
-# get new id
+
 def get_new_id(file):
     with open(file) as f:
         reader = csv.reader(f)
         new_id = len(next(zip(*reader)))
     return new_id
 
-# get expiration date
+
 def get_expiration_date(days):
     date = get_date()
     today = datetime.datetime.strptime(date, '%Y-%m-%d').date()
     new_date = today + datetime.timedelta(days=days)
     return new_date
 
-# buy item
+
 def buy_item():
     product_name = input('Product: ')
     today = get_date()

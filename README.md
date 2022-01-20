@@ -12,22 +12,78 @@ First we can get the help menu:
 > for bash user python main.py -h
 > usage: main.py -h 
 >
-> positional arguments:
+> supermarket 101 inventory.
 
-  {advance-time,showdate,settoday,totalrevenue,daterevenue,buy,sell,inventory,sales,purchases}
+># positional arguments are: scroll down for more info 
+
+>{advance-time,show-date,set-today,total-revenue,date-revenue,buy,sell,inventory,sales,purchases}
 
     advance-time        Advance the date a number of days.
-    showdate            Show the system date.
-    settoday            Set the system date to the current date.
-    totalrevenue        Show the total revenue, between now and the beginning of time.
-    daterevenue         Show the total revenue, between between two dates.
+    show-date           Show the system date.
+    set-today           Set the system date to the current date.
+    total-revenue       Show the total revenue, between now and the beginning of time.
+    date-revenue        Show the total revenue, between between two dates.
     buy                 Register the purchasing of a product.
     sell                Register a sale.
     inventory           Shows the amounts of currently available products.
     sales               Shows all sales made since the beginning of time.
     purchases           Shows all purchases made since the dawn of man.
 
-optional arguments:
+>optional arguments:
   -h, --help            show this help message and exit
+# advance-time 
+$ python main.py advance-time
+Please tell me how many days you would like to chance date/time:5
+The new date is now 2022-01-30.
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+# Supermarket 101 Namespace(command='advance-time', func=<function advance_time at 0x00000250C9B38310>)
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+# set-today
+$ python main.py set-today
+The date is now: 2022-01-20
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+# Supermarket 101 Namespace(command='set-today', func=<function set_date_today at 0x000002601B4F8280>)
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+# buy 
+$ python main.py buy
+Product: chees
+Amount of items bought: 2
+Amount paid (example input: 1.25): 1.00
+Expiration date (days from now): 3
+You have purchased chees costing 1.0 times 2, they wil expire on 2022-01-23
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+# Supermarket 101 Namespace(command='buy', func=<function buy_item at 0x0000019604D17CA0>)
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+# total-revenue
+$ python main.py total-revenue
+The total revenue is: $31.75
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+# Supermarket 101 Namespace(command='total-revenue', func=<function print_total_revenue at 0x000001D91E49B040>)
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+# purchases
+$ python main.py purchases
+┌──────────────┬──────────────────┬───────┬─────────────────┐
+│ Product      │ Date of purchase │ Price │ Expiration date │
+├──────────────┼──────────────────┼───────┼─────────────────┤
+│ banana       │ 2021-08-24       │ 1.25  │ 2021-08-28      │
+│ banana       │ 2021-08-24       │ 1.25  │ 2021-08-28      │
+│ banana       │ 2021-08-24       │ 1.25  │ 2021-08-28      │
+│ banana       │ 2021-08-24       │ 1.25  │ 2021-08-22      │
+│ apple        │ 2021-08-24       │ 1.25  │ 2021-08-27      │
+│ apple        │ 2021-08-24       │ 1.25  │ 2021-08-27      │
+│ peach        │ 2021-08-24       │ 1.3   │ 2021-08-27      │
+│ peach        │ 2021-08-24       │ 1.0   │ 2021-08-27      │
+│ peach        │ 2021-08-24       │ 1.0   │ 2021-08-27      │
+│ brood        │ 2022-01-25       │ 2.0   │ 2022-01-30      │
+│ chees        │ 2022-01-20       │ 1.0   │ 2022-01-23      │
+│ chees        │ 2022-01-20       │ 1.0   │ 2022-01-23      │
+└──────────────┴──────────────────┴───────┴─────────────────┘
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+# Supermarket 101 Namespace(command='purchases', func=<function display_purchases at 0x00000235B2477B80>)
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
 # have fun whit this master tool
