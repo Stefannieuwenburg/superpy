@@ -36,14 +36,14 @@ $ python main.py advance-time
 Please tell me how many days you would like to chance date/time:5
 The new date is now 2022-01-30.
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-# Supermarket 101 Namespace(command='advance-time', func=<function advance_time at 0x00000250C9B38310>)
+# Supermarket 101 Namespace(command='advance-time',)
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
 # set-today
 $ python main.py set-today
 The date is now: 2022-01-20
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-# Supermarket 101 Namespace(command='set-today', func=<function set_date_today at 0x000002601B4F8280>)
+# Supermarket 101 Namespace(command='set-today',)
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
 # buy 
@@ -54,14 +54,14 @@ Amount paid (example input: 1.25): 1.00
 Expiration date (days from now): 3
 You have purchased chees costing 1.0 times 2, they wil expire on 2022-01-23
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-# Supermarket 101 Namespace(command='buy', func=<function buy_item at 0x0000019604D17CA0>)
+# Supermarket 101 Namespace(command='buy',)
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
 # total-revenue
 $ python main.py total-revenue
 The total revenue is: $31.75
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-# Supermarket 101 Namespace(command='total-revenue', func=<function print_total_revenue at 0x000001D91E49B040>)
+# Supermarket 101 Namespace(command='total-revenue',) 
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
 # purchases
@@ -83,7 +83,7 @@ $ python main.py purchases
 │ chees        │ 2022-01-20       │ 1.0   │ 2022-01-23      │
 └──────────────┴──────────────────┴───────┴─────────────────┘
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-# Supermarket 101 Namespace(command='purchases', func=<function display_purchases at 0x00000235B2477B80>)
+# Supermarket 101 Namespace(command='purchases',)
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
 # have fun whit this master tool
