@@ -12,6 +12,8 @@ search online for more information and video's on the subjects.
 Before this assignment I didn't know what argparse was. The video's and documentation were pretty straight forward what i found on the internet
 so that wasn't really an issue. It's nice to know that you can do all kinds of things with argparse.
 next to this i also make a pizza ordering tool to practice on befor to start whith te project.
+i have use a internet video voor my basic themplate for this project.
+this is the link for it http://omgenomics.com/python-command-line-program/ the video link is https://youtu.be/zi-FIG3efag
 
 # Datetime module
 

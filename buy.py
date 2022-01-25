@@ -2,6 +2,7 @@ from date import get_date
 import csv
 import datetime
 from inventory import bought_link
+from rich import print
 
 
 def get_new_id(file):

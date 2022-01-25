@@ -1,6 +1,7 @@
 from date import get_date
 from inventory import get_available_product, sold_link
 from buy import get_new_id
+from rich import print
 import csv
 
 

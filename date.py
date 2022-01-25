@@ -1,4 +1,5 @@
 import datetime
+from rich import print
 
 
 def get_date():

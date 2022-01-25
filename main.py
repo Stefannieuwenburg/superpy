@@ -6,6 +6,7 @@ from sell import sell_item
 from inventory import display_inventory, display_purchases, display_sales
 import revenue
 from rich.console import Console
+from rich import print
 
 
 
@@ -112,7 +113,6 @@ def main():
 
 if __name__ == '__main__':
     main()
-    console = Console()
-    console.print("$" * 90)
-    console.print("                              Supermarket 101")
-    console.print("$" * 90)
+    print("$" * 90)
+    print("                              Supermarket 101")
+    print("$" * 90)
