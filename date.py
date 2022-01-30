@@ -1,5 +1,5 @@
 import datetime
-from rich import print
+import rich
 
 
 def get_date():
@@ -26,7 +26,7 @@ def set_date_today():
 def advance_time():
     try:
         days = int(input(
-            'Please tell me how many days you would like to chance date/time:'))
+            'Please tell me how many days you would like to chance:'))
         today = datetime.datetime.strptime(get_date(), '%Y-%m-%d').date()
         new_date = today + datetime.timedelta(days=days)
         with open('./data/date.txt', 'w') as file:
